@@ -22,7 +22,6 @@ var/const/CHARACTER_PREFERENCE_INPUT_TITLE = "Character Preference"
 	category_item_type = /datum/category_item/player_setup_item/occupation
 */
 
-
 /*
 /datum/category_group/player_setup_category/appearance_preferences
 	name = "Antagonism"

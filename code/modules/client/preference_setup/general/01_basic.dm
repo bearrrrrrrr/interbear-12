@@ -5,7 +5,7 @@ datum/preferences
 	var/age = 30						//age of character
 	var/spawnpoint = "Default" 			//where this character will spawn (0-2).
 	var/metadata = ""
-	var/religion = "None"
+//	var/religion = "None"
 
 /datum/category_item/player_setup_item/general/basic
 	name = "Basic"
