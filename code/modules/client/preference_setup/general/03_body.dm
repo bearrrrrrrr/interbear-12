@@ -36,6 +36,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 /datum/category_item/player_setup_item/general/body
 	name = "Body"
 	sort_order = 3
+	var/hide_species = TRUE
 
 /datum/category_item/player_setup_item/general/body/load_character(var/savefile/S)
 	from_file(S["species"], pref.species)
@@ -140,11 +141,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "<table><tr style='vertical-align:top'><td><b>Body</b> "
 	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
-	//. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
+	. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
-	//if(has_flag(mob_species, HAS_BASE_SKIN_COLOURS))
-	//	. += "Base Colour: <a href='?src=\ref[src];base_skin=1'>[pref.s_base]</a><br>"
+	if(has_flag(mob_species, HAS_BASE_SKIN_COLOURS))
+		. += "Base Colour: <a href='?src=\ref[src];base_skin=1'>[pref.s_base]</a><br>"
 
 	if(has_flag(mob_species, HAS_A_SKIN_TONE))
 		. += "Skin Tone: <a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/[mob_species.max_skin_tone()]</a><br>"
