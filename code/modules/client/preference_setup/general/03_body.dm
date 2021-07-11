@@ -36,7 +36,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 /datum/category_item/player_setup_item/general/body
 	name = "Body"
 	sort_order = 3
-	var/hide_species = TRUE
 
 /datum/category_item/player_setup_item/general/body/load_character(var/savefile/S)
 	from_file(S["species"], pref.species)
